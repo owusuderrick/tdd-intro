@@ -3,7 +3,7 @@
  * @param {number} num2 - Second number to add.
  * @returns {number} The sum, unless the two values are the same,
  * then returns double their sum.
- *
+ *s
  * @example
  * sumDouble(1, 2); // 3
  * @example
@@ -13,6 +13,8 @@
  */
 export function sumDouble(num1, num2) {
   /* TODO */
+  let sum = num1 + num2;
+  return num1 === num2 ? sum * 2 : sum;
 }
 
 /**
@@ -29,6 +31,7 @@ export function sumDouble(num1, num2) {
  */
 export function makes10(num1, num2) {
   /* TODO */
+  return num1 === 10 || num2 === 10 || num1 + num2 === 10;
 }
 
 /**
@@ -47,6 +50,7 @@ export function makes10(num1, num2) {
  */
 export function near100(n, distance) {
   /* TODO */
+  return Math.abs(100 - n) <= distance;
 }
 
 /**
@@ -64,6 +68,7 @@ export function near100(n, distance) {
  */
 export function isMultiple35(n) {
   /* TODO */
+  return n % 3 === 0 || n % 5 === 0;
 }
 
 /**
@@ -82,6 +87,7 @@ export function isMultiple35(n) {
  */
 export function shareLastDigit(num1, num2) {
   /* TODO */
+  return num1 % 5 === num2 % 5;
 }
 
 /**
@@ -99,6 +105,7 @@ export function shareLastDigit(num1, num2) {
  */
 export function isColdAndHot(temp1, temp2) {
   /* TODO */
+  return (temp1 < 0 && temp2 > 100) || (temp1 > 100 && temp2 < 0);
 }
 
 /**
@@ -115,6 +122,7 @@ export function isColdAndHot(temp1, temp2) {
  */
 export function makeABBA(A, B) {
   /* TODO */
+  return A + B + B + A;
 }
 
 /**
@@ -178,4 +186,9 @@ export function canEnterClub(you, date) {
  */
 export function shouldAnswerPhone(isMorning, isBoss, isAsleep) {
   /* TODO */
+  if (isMorning) {
+    return isBoss;
+  } else if (isAsleep) {
+    return false;
+  } else return true;
 }
